@@ -60,8 +60,13 @@
     };
   });
   require.define('/hello-world/index.js', function (module, exports, __dirname, __filename) {
+    var HelloWorld = Backbone.View.extend({
+        render: function () {
+          $('body').append('<h1>Hello World</h1>');
+        }
+      });
     module.exports = function () {
-      $('body').append('<h1>Hello World</h1>');
+      new HelloWorld().render();
     };
   });
   require('/main.js');

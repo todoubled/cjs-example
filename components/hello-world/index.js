@@ -1,3 +1,10 @@
+var HelloWorld = Backbone.View.extend({
+  render: function() {
+    $('body').append('<h1>Hello World</h1>');
+  }
+});
+
+
 module.exports = function() {
-  $('body').append('<h1>Hello World</h1>');
+  new HelloWorld().render();
 };

@@ -12,3 +12,9 @@ To resolve dependencies and build the example app:
 ```
 make build
 ```
+
+To demo the app:
+
+```
+open public/index.html
+```
